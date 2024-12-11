@@ -11,9 +11,30 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/creëerbeheerder', function () {
+    return view('creëerbeheerder');
+})->middleware(['auth', 'verified'])->name('creëerbeheerder');
+
+Route::get('/editbeheerder', function () {
+    return view('editbeheerder');
+})->middleware(['auth', 'verified'])->name('editbeheerder');
+
+Route::get('/eigenticketsoverzichtklant', function () {
+    return view('eigenticketsoverzichtklant');
+})->middleware(['auth', 'verified'])->name('eigenticketsoverzichtklant');
+
+Route::get('/overzichtbeheerder', function () {
+    return view('overzichtbeheer');
+})->middleware(['auth', 'verified'])->name('overzichtbeheerder');
+
+Route::get('/puntenklant', function () {
+    return view('puntenklant');
+})->middleware(['auth', 'verified'])->name('puntenklant');
+
+Route::get('/ticketsoverzichtklant', function () {
+    return view('ticketsoverzichtklant');
+})->middleware(['auth', 'verified'])->name('ticketsoverzichtklant');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
