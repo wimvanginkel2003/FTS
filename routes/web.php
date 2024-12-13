@@ -35,6 +35,10 @@ Route::get('/ticketsoverzichtklant', function () {
     return view('ticketsoverzichtklant');
 })->middleware(['auth', 'verified'])->name('ticketsoverzichtklant');
 
+Route::get('/detailpaginaticketboeken', function () {
+    return view('detailpaginaticketboeken');
+})->middleware(['auth', 'verified'])->name('detailpaginaticketboeken');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

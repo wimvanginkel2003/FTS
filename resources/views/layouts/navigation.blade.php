@@ -31,6 +31,9 @@
                     <x-nav-link :href="route('editbeheerder')" :active="request()->routeIs('editbeheerder')">
                         {{ __('Edit – beheerder') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('detailpaginaticketboeken')" :active="request()->routeIs('detailpaginaticketboeken')">
+                        {{ __('detail pagina – klant') }}
+                    </x-nav-link>
                 </div>
             </div>
 
