@@ -4,9 +4,9 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 flex items-center font-bold text-4xl">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        FTS
                     </a>
                 </div>
 
@@ -98,6 +98,9 @@
             <x-responsive-nav-link :href="route('puntenklant')" :active="request()->routeIs('puntenklant')">
                 {{ __('Punten – klant') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('detailpaginaticketboeken')" :active="request()->routeIs('detailpaginaticketboeken')">
+                {{ __('Detailpagina - klant') }}
+            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('overzichtbeheerder')" :active="request()->routeIs('overzichtbeheerder')">
                 {{ __('Overzicht - beheerder') }}
             </x-responsive-nav-link>
@@ -107,6 +110,7 @@
             <x-responsive-nav-link :href="route('editbeheerder')" :active="request()->routeIs('editbeheerder')">
                 {{ __('Edit – beheerder') }}
             </x-responsive-nav-link>
+
         </div>
 
         <!-- Responsive Settings Options -->
