@@ -49,7 +49,7 @@
 
         <div class="flex justify-between">
         <h2 class="mt-6">€55,00</h2>
-            <x-nav-link @class("mb-2 mt-6") :href="route('eigenticketsoverzichtklant')" :active="request()->routeIs('eigenticketsoverzichtklant')">
+            <x-nav-link @class("mb-2 mt-6") :href="route('detailpaginaticketboeken')" :active="request()->routeIs('detailpaginaticketboeken')">
                 {{ __('Meer informatie') }}
             </x-nav-link>
 
