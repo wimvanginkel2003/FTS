@@ -2,7 +2,7 @@
     <x-weergaven-punten></x-weergaven-punten>
 
 
-    <div class="font-bold m-2 mt-8 font-bold text-indigo-900 sm:w-2/3 sm:text-4xl">
+    <div class="font-bold m-2 mt-8 text-indigo-900 sm:w-2/3 sm:text-4xl">
         <h1>Je geboekte busreisen</h1>
     </div>
 
