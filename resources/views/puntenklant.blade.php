@@ -1,5 +1,8 @@
 <x-app-layout>
 
+    <div class=" m-2 mt-4 md:text-2xl sm:w-1/2">
+        <h1 class="font-bold text-indigo-900">Punten: 80</h1>
+    </div>
 
     <div class="m-2 mt-4 sm:w-1/2">
         <h1 class="font-bold text-indigo-900">Wissel je coupons in</h1>

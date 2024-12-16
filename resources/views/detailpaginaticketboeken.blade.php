@@ -24,14 +24,11 @@
                 </div>
 
                 <div class="flex items-center justify-center">
-                    <!-- Verticale lijn meer naar het midden -->
                     <div class="w-[2px] h-32 bg-indigo-900 relative mr-8 ">
-                        <!-- Bus-icoon aan de rechterkant van de lijn -->
                         <div class="absolute top-1/2 -translate-y-1/2 right-[-30px]">
                             <i class="fa-solid fa-bus text-indigo-900"></i>
                         </div>
                     </div>
-                    <!-- Witruimte tussen de lijn en tekst -->
                     <h2 class="ml-12 text-indigo-900">Reisduur: 6:00</h2>
                 </div>
 
@@ -73,14 +70,11 @@
                 </div>
 
                 <div class="flex items-center justify-center">
-                    <!-- Verticale lijn meer naar het midden -->
                     <div class="w-[2px] h-32 bg-indigo-900 relative mr-8">
-                        <!-- Bus-icoon aan de rechterkant van de lijn -->
                         <div class="absolute top-1/2 -translate-y-1/2 right-[-30px]">
                             <i class="fa-solid fa-bus text-indigo-900"></i>
                         </div>
                     </div>
-                    <!-- Witruimte tussen de lijn en tekst -->
                     <h2 class="ml-12 text-indigo-900">Reisduur: 6:00</h2>
                 </div>
 

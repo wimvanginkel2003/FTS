@@ -15,13 +15,11 @@
             </div>
 
             <div class="flex items-center justify-between w-full">
-                <!-- Links: 16-03-2025 -->
                 <div class="flex flex-col items-center">
                     <h2 class="text-xs mb-1 text-indigo-900 md:text-xl">16-03-2025</h2>
                     <h2 class="text-xs text-indigo-900 md:text-xl">04:00  <i class="fa-solid fa-bus md:text-xl"></i>  09:00</h2>
                 </div>
 
-                <!-- Cirkeltje met pijlen -->
                 <div class="flex items-center justify-center relative w-20 h-20">
                     <i class="fa-regular fa-circle text-indigo-900 text-6xl absolute"></i>
                     <div class="flex items-center justify-center">
@@ -30,7 +28,6 @@
                     </div>
                 </div>
 
-                <!-- Rechts: 12-03-2025 -->
                 <div class="flex flex-col items-center">
                     <h2 class="text-xs mb-1 text-indigo-900 md:text-xl">20-03-2025</h2>
                     <h2 class="text-xs text-indigo-900 md:text-xl">10:00 <i class="fa-solid fa-bus md:text-xl"></i> 15:00</h2>
@@ -72,7 +69,6 @@
                     <h2 class="text-xs text-indigo-900 md:text-xl">04:00  <i class="fa-solid fa-bus text-indigo-900 md:text-xl"></i>  19:00</h2>
                 </div>
 
-                <!-- Cirkeltje met pijlen -->
                 <div class="flex items-center justify-center relative w-20 h-20">
                     <i class="fa-regular fa-circle text-indigo-900 text-6xl absolute"></i>
                     <div class="flex items-center justify-center">
@@ -81,7 +77,6 @@
                     </div>
                 </div>
 
-                <!-- Rechts: 12-03-2025 -->
                 <div class="flex flex-col items-center">
                     <h2 class="text-xs mb-1 text-indigo-900 md:text-xl">09-06-2025</h2>
                     <h2 class="text-xs text-indigo-900 md:text-xl">05:00 <i class="fa-solid fa-bus text-indigo-900 md:text-xl"></i> 22:00</h2>
