@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center font-bold text-4xl">
-                    <a href="{{ route('dashboard') }}">
+                    <a class="text-indigo-900" href="{{ route('dashboard') }}">
                         FTS
                     </a>
                 </div>

@@ -30,7 +30,7 @@
             @endisset
 
             <!-- Page Content -->
-            <main>
+            <main class="sm:flex flex-col items-center">
                 {{ $slot }}
             </main>
 
