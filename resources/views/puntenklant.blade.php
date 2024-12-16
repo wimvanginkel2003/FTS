@@ -1,13 +1,16 @@
 <x-app-layout>
-    <x-weergaven-punten></x-weergaven-punten>
 
-    <div class="m-2 mt-8">
+    <div class="sm:w-1/2  sm:mt-4  mt-2 m-2">
+        <h2 class="text-4xl text-indigo-900 font-bold">Punten: 80</h2>
+    </div>
+
+    <div class="m-2 mt-4 sm:w-1/2">
         <h1 class="font-bold text-indigo-900">Wissel je coupons in</h1>
         <p class="text-indigo-900"> Op deze pagina kun je je gespaarde punten inwisselen voor verschillende coupons. Alle beschikbare coupons worden weergegeven, van de minste naar de meeste benodigde punten. Zodra je genoeg punten hebt, kun je op de knop 'Activeer' klikken om de coupon direct te activeren. Profiteer van kortingen en andere voordelen bij je volgende boeking!
         </p>
     </div>
 
-    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-green-700 border-2 sm:w-1/3">
+    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-green-700 border-2 sm:w-1/2">
         <div class="flex row justify-between">
         <h1 class="font-bold text-xl">Koude drank </h1>
         </div>
@@ -28,7 +31,7 @@
 
 
 
-    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-red-600 border-2 sm:w-2/3">
+    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-red-600 border-2 sm:w-1/2">
         <div class="flex row justify-between">
             <h1 class="font-bold text-xl">Chocolate chip cookie </h1>
         </div>
@@ -50,7 +53,7 @@
 
 
 
-    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-red-600 border-2 sm:w-2/3">
+    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-red-600 border-2 sm:w-1/2">
         <div class="flex row justify-between">
             <h1 class="font-bold text-xl">Classic Subs</h1>
         </div>
@@ -69,7 +72,7 @@
         </div>
     </div>
 
-    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-red-600 border-2 sm:w-2/3">
+    <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-red-600 border-2 sm:w-1/2">
         <div class="flex row justify-between">
             <h1 class="font-bold text-xl">Big Mac menu</h1>
         </div>
