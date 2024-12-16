@@ -1,8 +1,5 @@
 <x-app-layout>
 
-    <div class="sm:w-1/2  sm:mt-4  mt-2 m-2">
-        <h2 class="text-4xl text-indigo-900 font-bold">Punten: 80</h2>
-    </div>
 
     <div class="m-2 mt-4 sm:w-1/2">
         <h1 class="font-bold text-indigo-900">Wissel je coupons in</h1>
@@ -71,6 +68,9 @@
             <a href="boeken">Activeer</a>
         </div>
     </div>
+
+
+
 
     <div class="mt-4 m-2 p-6 mb-6 bg-white shadow-md rounded-2xl border-red-600 border-2 sm:w-1/2">
         <div class="flex row justify-between">
