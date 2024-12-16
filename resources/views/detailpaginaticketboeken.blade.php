@@ -106,9 +106,9 @@
             </div>
 
             <div class="font-bold text-white m-2 p-6 pt-1 pb-1 shadow-md rounded-xl flex justify-center bg-green-700">
-                <div class=" text-xl bg-green-700" :href="route('eigenticketsoverzichtklant')" :active="request()->routeIs('eigenticketsoverzichtklant')">
+                <a href="{{ route('eigenticketsoverzichtklant') }}" class="text-xl bg-green-700 {{ request()->routeIs('eigenticketsoverzichtklant') ? 'active' : '' }}">
                     {{ __('Boeken') }}
-                </div>
+                </a>
             </div>
 
         </div>

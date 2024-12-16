@@ -1,18 +1,18 @@
 <x-app-layout>
 
-    <div class="flex flex-col border-2 border-black">
+    <div class="flex flex-col">
 
         <div>
-                <div class="flex flex-col p-1 border-2 border-black">
+                <div class="flex flex-col p-1">
                     <input placeholder="Naam festival" class="w-full">
                 </div>
 
         </div>
 
 
-        <div class="flex flex-col md:flex-row border-2 border-black">
+        <div class="flex flex-col md:flex-row ">
 
-                <div class="border-2 border-black flex md:flex-row">
+                <div class=" flex md:flex-row">
 
                     <div class="flex flex-col">
 
@@ -86,7 +86,7 @@
 
 
 
-            <div class="border-2 border-black flex flex-row">
+            <div class="flex flex-row">
 
                 <div class="flex flex-col">
 
