@@ -28,7 +28,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('ticketsoverzichtklant', absolute: false));
+        if (Auth::user()->role === 'admin') {
+            return redirect()->route('overzichtbeheerder');
+        }
+
+
+        return redirect()->route('ticketsoverzichtklant');
+
     }
 
     /**

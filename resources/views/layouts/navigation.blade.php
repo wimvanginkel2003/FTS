@@ -5,35 +5,39 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center font-bold text-4xl">
-                    <a class="text-indigo-900" href="{{ route('ticketsoverzichtklant') }}">
+                    <a class="text-indigo-900" href="{{ Auth::user()->role === 'admin' ? route('overzichtbeheerder') : route('ticketsoverzichtklant') }}">
                         FTS
                     </a>
                 </div>
 
-                <!-- Navigation Links, bovenste rij -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
 
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    @can('is-customer')
                     <x-nav-link :href="route('ticketsoverzichtklant')" :active="request()->routeIs('ticketsoverzichtklant')">
                         {{ __('Tickets – klant') }}
                     </x-nav-link>
+                    @endcan
+                    @can('is-customer')
                     <x-nav-link :href="route('eigenticketsoverzichtklant')" :active="request()->routeIs('eigenticketsoverzichtklant')">
                         {{ __('Eigen tickets – klant') }}
                     </x-nav-link>
+                        @endcan
+                        @can('is-customer')
                     <x-nav-link :href="route('puntenklant')" :active="request()->routeIs('puntenklant')">
                         {{ __('Punten – klant') }}
                     </x-nav-link>
+                        @endcan
+                        @can('is-admin')
                     <x-nav-link :href="route('overzichtbeheerder')" :active="request()->routeIs('overzichtbeheerder')">
                         {{ __('Overzicht - beheerder') }}
                     </x-nav-link>
+                        @endcan
+                        @can('is-admin') @cannot('is-customer')
                     <x-nav-link :href="route('creëerbeheerder')" :active="request()->routeIs('creëerbeheerder')">
                         {{ __('Creëer - beheerder') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('editbeheerder')" :active="request()->routeIs('editbeheerder')">
-                        {{ __('Edit – beheerder') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('detailpaginaticketboeken')" :active="request()->routeIs('detailpaginaticketboeken')">
-                        {{ __('detail pagina – klant') }}
-                    </x-nav-link>
+                        @endcan @endcannot
+
                 </div>
             </div>
 
@@ -86,28 +90,36 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+            @can('is-customer')
             <x-responsive-nav-link :href="route('ticketsoverzichtklant')" :active="request()->routeIs('ticketsoverzichtklant')">
                 {{ __('Tickets – klant') }}
             </x-responsive-nav-link>
+            @endcan
+            @can('is-customer')
             <x-responsive-nav-link :href="route('eigenticketsoverzichtklant')" :active="request()->routeIs('eigenticketsoverzichtklant')">
                 {{ __('Eigen tickets – klant') }}
             </x-responsive-nav-link>
+                @endcan
+                @can('is-customer')
             <x-responsive-nav-link :href="route('puntenklant')" :active="request()->routeIs('puntenklant')">
                 {{ __('Punten – klant') }}
             </x-responsive-nav-link>
+                @endcan
+                @can('is-customer')
             <x-responsive-nav-link :href="route('detailpaginaticketboeken')" :active="request()->routeIs('detailpaginaticketboeken')">
                 {{ __('Detailpagina - klant') }}
             </x-responsive-nav-link>
+                @endcan
+                @can('is-admin')
             <x-responsive-nav-link :href="route('overzichtbeheerder')" :active="request()->routeIs('overzichtbeheerder')">
                 {{ __('Overzicht - beheerder') }}
             </x-responsive-nav-link>
+                @endcan
+                @can('is-admin')
             <x-responsive-nav-link :href="route('creëerbeheerder')" :active="request()->routeIs('creëerbeheerder')">
                 {{ __('Creëer - beheerder') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('editbeheerder')" :active="request()->routeIs('editbeheerder')">
-                {{ __('Edit – beheerder') }}
-            </x-responsive-nav-link>
-
+                @endcan
         </div>
 
         <!-- Responsive Settings Options -->
