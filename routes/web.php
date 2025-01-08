@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BusboekenController;
 
 // Route: Home
 Route::get('/', function () {
@@ -64,6 +65,8 @@ Route::get('/detailpaginaticketboeken', function () {
     }
     return view('detailpaginaticketboeken');
 })->middleware(['auth', 'verified'])->name('detailpaginaticketboeken');
+
+Route::post('/bus-ticket', [BusboekenController::class, 'store'])->name('bus-ticket.store');
 
 // Profile routes (alleen toegankelijk voor geauthenticeerde gebruikers)
 Route::middleware('auth')->group(function () {

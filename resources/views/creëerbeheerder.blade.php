@@ -2,9 +2,12 @@
 
     <div class="flex flex-col">
 
+        <form method="POST" action="{{ route('bus-ticket.store') }}">
+            @csrf
+
         <div>
                 <div class="flex flex-col p-1">
-                    <input placeholder="Naam festival" class="w-full">
+                    <input name="Festival_naam"  placeholder="Naam festival" class="w-full">
                 </div>
 
         </div>
@@ -17,15 +20,15 @@
                     <div class="flex flex-col">
 
                                     <div class="flex flex-col p-1 ">
-                                        <input placeholder="Land van vertrek" class="w-full">
+                                        <input name="Land_van_vertrek_heen" placeholder="Land van vertrek" class="w-full">
                                     </div>
 
                                     <div class="flex flex-col p-1">
-                                        <input placeholder="Stad van vertrek" class="w-full">
+                                        <input name="Stad_van_vertrek_heen" placeholder="Stad van vertrek" class="w-full">
                                     </div>
 
                                     <div class="flex flex-col  p-1">
-                                        <input placeholder="Adres Opstaplocatie" class="full">
+                                        <input name="Adres_opstaplocatie_heen" placeholder="Adres Opstaplocatie" class="full">
                                     </div>
 
                         <div class="flex flex-row">
@@ -34,18 +37,18 @@
 
                                     <div class="flex flex-col p-1">
                                         <label>Vertrekdatum heenreis</label>
-                                        <input type="date" class="w-full">
+                                        <input name="Vertrekdatum_heenreis" type="date" class="w-full">
                                     </div>
 
                                     <div class="flex flex-col p-1">
                                         <label>Aamkomstdatum</label>
-                                        <input type="date" >
+                                        <input name="Aankomstdatum_heenreis" type="date" >
                                     </div>
 
 
                                     <div class="flex flex-col p-1">
                                     <label>Duur busrit</label>
-                                    <input type="time" class="w-full">
+                                    <input name="Duur_busrit_heen" type="time" class="w-full">
                                 </div>
 
                             </div>
@@ -54,15 +57,14 @@
                             <div>
 
 
-
                                 <div class="flex flex-col p-1">
                                     <label>Vertrektijd heenreis</label>
-                                    <input type="time" class="w-full">
+                                    <input name="Vertrektijd_heenreis" type="time" class="w-full">
                                 </div>
 
                                     <div class="flex flex-col p-1">
                                         <label>Aamkomstijd</label>
-                                        <input type="time">
+                                        <input name="Aankomsttijd_heenreis" type="time">
                                     </div>
 
                             </div>
@@ -72,11 +74,11 @@
 
 
                         <div class="flex flex-col  p-1">
-                            <textarea  placeholder="Beschrijving van de Opstaplocatie" class="w-full h-32 "></textarea>
+                            <textarea name="Beschrijving_opstaplocatie_heen" placeholder="Beschrijving van de Opstaplocatie" class="w-full h-32 "></textarea>
                         </div>
 
                         <div class="flex flex-col p-1">
-                            <textarea placeholder="Beschrijving van de aankomstlocatie" class="w-full h-32"></textarea>
+                            <textarea name="Beschrijving_aankomstlocatie_heen" placeholder="Beschrijving van de aankomstlocatie" class="w-full h-32"></textarea>
                         </div>
                     </div>
 
@@ -91,15 +93,15 @@
                 <div class="flex flex-col">
 
                     <div class="flex flex-col p-1 ">
-                        <input placeholder="Stad waar festival is" class="w-full">
+                        <input name="Stad_van_vertrek_terug" placeholder="Stad waar festival is" class="w-full">
                     </div>
 
                     <div class="flex flex-col p-1">
-                        <input placeholder="Land van festival" class="w-full">
+                        <input name="Land_van_vertrek_terug" placeholder="Land van festival" class="w-full">
                     </div>
 
                     <div class="flex flex-col  p-1">
-                        <input placeholder="Adres Opstaplocatie" class="full">
+                        <input name="Adres_opstaplocatie_terug" placeholder="Adres Opstaplocatie" class="full">
                     </div>
 
                     <div class="flex flex-row">
@@ -108,19 +110,19 @@
 
                             <div class="flex flex-col p-1">
                                 <label>Vertrekdatum terugreis</label>
-                                <input type="date" class="w-full">
+                                <input name="Vertrekdatum_terugreis" type="date" class="w-full">
                             </div>
 
                             <div class="flex flex-col p-1">
                                 <label>Aamkomstdatum</label>
-                                <input type="date" >
+                                <input  name="Aankomstdatum_terugreis" type="date" >
                             </div>
 
 
 
                             <div class="flex flex-col p-1">
                                 <label>Duur busrit</label>
-                                <input type="time" class="w-full">
+                                <input name="Duur_busrit_terug" type="time" class="w-full">
                             </div>
 
                         </div>
@@ -130,15 +132,14 @@
 
 
 
-
                             <div class="flex flex-col p-1">
                                 <label>Vertrektijd terugreis</label>
-                                <input type="time" class="w-full">
+                                <input name="Vertrektijd_terugreis" type="time" class="w-full">
                             </div>
 
                             <div class="flex flex-col p-1">
                                 <label>Aamkomstijd</label>
-                                <input type="time">
+                                <input name="Aankomsttijd_terugreis" type="time">
                             </div>
 
                         </div>
@@ -148,11 +149,11 @@
 
 
                     <div class="flex flex-col  p-1">
-                        <textarea  placeholder="Beschrijving van de Opstaplocatie" class="w-full h-32 "></textarea>
+                        <textarea name="Beschrijving_opstaplocatie_terug" placeholder="Beschrijving van de Opstaplocatie" class="w-full h-32 "></textarea>
                     </div>
 
                     <div class="flex flex-col p-1">
-                        <textarea placeholder="Beschrijving van de aankomstlocatie" class="w-full h-32"></textarea>
+                        <textarea name="Beschrijving_aankomstlocatie_terug" placeholder="Beschrijving van de aankomstlocatie" class="w-full h-32"></textarea>
                     </div>
                 </div>
 
@@ -162,17 +163,24 @@
 
                 <div class="flex flex-col m-2 w-2/5 md:w-2/3">
 
-                    <input placeholder="Aantal punten">
+                    <input name="Punten" placeholder="Aantal punten">
 
-                    <x-nav-link :href="route('overzichtbeheerder')" :active="request()->routeIs('overzichtbeheerder')">
-                        {{ __('Opslaan') }}
-                    </x-nav-link>
+{{--                    <x-nav-link :href="route('overzichtbeheerder')" :active="request()->routeIs('overzichtbeheerder')">--}}
+{{--                        {{ __('Opslaan') }}--}}
+{{--                    </x-nav-link>--}}
+
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+                        Opslaan
+                    </button>
+
 
                 </div>
 
             </div>
 
         </div>
+
+        </form>
 
     </div>
 
