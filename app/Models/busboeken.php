@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\user;
+
 
 
 class busboeken extends Model
@@ -33,5 +35,14 @@ class busboeken extends Model
         'Beschrijving_opstaplocatie_terug',
         'Beschrijving_aankomstlocatie_terug',
         'Punten',
+        'Prijs',
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'busboeken_user', 'busboeking_id', 'user_id');
+    }
+
+
+
 }

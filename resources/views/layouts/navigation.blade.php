@@ -14,27 +14,25 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     @can('is-customer')
                     <x-nav-link :href="route('ticketsoverzichtklant')" :active="request()->routeIs('ticketsoverzichtklant')">
-                        {{ __('Tickets – klant') }}
+                        {{ __('Tickets') }}
                     </x-nav-link>
                     @endcan
                     @can('is-customer')
                     <x-nav-link :href="route('eigenticketsoverzichtklant')" :active="request()->routeIs('eigenticketsoverzichtklant')">
-                        {{ __('Eigen tickets – klant') }}
+                        {{ __('Eigen tickets') }}
                     </x-nav-link>
                         @endcan
-                        @can('is-customer')
                     <x-nav-link :href="route('puntenklant')" :active="request()->routeIs('puntenklant')">
-                        {{ __('Punten – klant') }}
+                        {{ __('Punten') }}
                     </x-nav-link>
-                        @endcan
                         @can('is-admin')
                     <x-nav-link :href="route('overzichtbeheerder')" :active="request()->routeIs('overzichtbeheerder')">
-                        {{ __('Overzicht - beheerder') }}
+                        {{ __('Actieve tickets') }}
                     </x-nav-link>
                         @endcan
                         @can('is-admin') @cannot('is-customer')
                     <x-nav-link :href="route('creëerbeheerder')" :active="request()->routeIs('creëerbeheerder')">
-                        {{ __('Creëer - beheerder') }}
+                        {{ __('Nieuwe ticket') }}
                     </x-nav-link>
                         @endcan @endcannot
 
@@ -103,11 +101,6 @@
                 @can('is-customer')
             <x-responsive-nav-link :href="route('puntenklant')" :active="request()->routeIs('puntenklant')">
                 {{ __('Punten – klant') }}
-            </x-responsive-nav-link>
-                @endcan
-                @can('is-customer')
-            <x-responsive-nav-link :href="route('detailpaginaticketboeken')" :active="request()->routeIs('detailpaginaticketboeken')">
-                {{ __('Detailpagina - klant') }}
             </x-responsive-nav-link>
                 @endcan
                 @can('is-admin')

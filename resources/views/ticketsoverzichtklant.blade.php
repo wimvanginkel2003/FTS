@@ -1,6 +1,6 @@
 <x-app-layout>
-  <x-weergaven-punten>
-  </x-weergaven-punten>
+    <x-weergaven-punten>
+    </x-weergaven-punten>
 
     <div class="font-bold m-4 mt-2 text-indigo-900 sm:w-2/3  sm:text-4xl">
         <h1>De te boeken busreisen</h1>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="flex justify-between">
-        <h2 class="mt-6 text-indigo-900 font-bold">€55,00</h2>
+            <h2 class="mt-6 text-indigo-900 font-bold">€55,00</h2>
             <x-nav-link @class("mb-2 mt-6") :href="route('detailpaginaticketboeken')" :active="request()->routeIs('detailpaginaticketboeken')">
                 {{ __('Details') }}
             </x-nav-link>
@@ -93,10 +93,7 @@
         </div>
 
         <div class="flex justify-between">
-            <h2 class="mt-6 text-indigo-900 font-bold">€70,00</h2>
-            <x-nav-link @class("mb-2 mt-6") :href="route('eigenticketsoverzichtklant')" :active="request()->routeIs('eigenticketsoverzichtklant')">
-                {{ __('Details') }}
-            </x-nav-link>
+
 
         </div>
 

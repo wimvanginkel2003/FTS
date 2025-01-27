@@ -1,48 +1,58 @@
 <?php
-
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use Notifiable;
+
+    protected $fillable = ['name', 'email', 'password', 'punten', 'punten_te_goed'];
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
+     * Relatie met Busboekens.
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    public function busboekens(): BelongsToMany
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->belongsToMany(Busboeken::class, 'busboeken_user', 'user_id', 'busboeking_id');
+    }
+
+    /**
+     * Relatie met Coupons.
+     */
+    public function coupons(): BelongsToMany
+    {
+        return $this->belongsToMany(Coupon::class, 'user_coupons')
+            ->withPivot('gebruik_datum', 'extra_informatie', 'code', 'code_verval')
+            ->withTimestamps();
+    }
+
+    /**
+     * Controleer en schrijf punten over.
+     */
+    public function checkAndTransferPoints(): void
+    {
+        $now = now();
+        $updated = false;
+
+        foreach ($this->busboekens as $busboeking) {
+            $vertrekTijd = Carbon::parse($busboeking->Vertrekdatum_heenreis);
+
+            // Controleer of vertrek binnen 48 uur is en punten voldoende zijn
+            if ($vertrekTijd->diffInHours($now, false) <= 48 && $this->punten_te_goed >= $busboeking->Punten) {
+                // Verplaats punten_te_goed naar punten
+                $this->punten += $busboeking->Punten;
+                $this->punten_te_goed -= $busboeking->Punten;
+                $updated = true;
+            }
+        }
+
+        if ($updated) {
+            $this->save();
+        }
     }
 }
+
