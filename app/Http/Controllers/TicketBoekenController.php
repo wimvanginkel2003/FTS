@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Providers\Controllers;
+namespace App\Http\Controllers;
 
 use App\Models\Busboeken;
+use App\Providers\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 

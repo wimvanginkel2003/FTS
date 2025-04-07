@@ -90,27 +90,27 @@
         <div class="pt-2 pb-3 space-y-1">
             @can('is-customer')
             <x-responsive-nav-link :href="route('ticketsoverzichtklant')" :active="request()->routeIs('ticketsoverzichtklant')">
-                {{ __('Tickets – klant') }}
+                {{ __('Tickets') }}
             </x-responsive-nav-link>
             @endcan
             @can('is-customer')
             <x-responsive-nav-link :href="route('eigenticketsoverzichtklant')" :active="request()->routeIs('eigenticketsoverzichtklant')">
-                {{ __('Eigen tickets – klant') }}
+                {{ __('Eigen tickets') }}
             </x-responsive-nav-link>
                 @endcan
                 @can('is-customer')
             <x-responsive-nav-link :href="route('puntenklant')" :active="request()->routeIs('puntenklant')">
-                {{ __('Punten – klant') }}
+                {{ __('Punten') }}
             </x-responsive-nav-link>
                 @endcan
                 @can('is-admin')
             <x-responsive-nav-link :href="route('overzichtbeheerder')" :active="request()->routeIs('overzichtbeheerder')">
-                {{ __('Overzicht - beheerder') }}
+                {{ __('Overzicht') }}
             </x-responsive-nav-link>
                 @endcan
                 @can('is-admin')
             <x-responsive-nav-link :href="route('creëerbeheerder')" :active="request()->routeIs('creëerbeheerder')">
-                {{ __('Creëer - beheerder') }}
+                {{ __('Creëer') }}
             </x-responsive-nav-link>
                 @endcan
         </div>

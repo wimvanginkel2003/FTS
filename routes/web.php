@@ -1,9 +1,10 @@
 <?php
 
-use App\Providers\Controllers\BusboekenController;
-use App\Providers\Controllers\CouponController;
-use App\Providers\Controllers\ProfileController;
-use App\Providers\Controllers\TicketBoekenController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BusboekenController;
+use App\Http\Controllers\CouponController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketBoekenController;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
@@ -103,8 +104,6 @@ Route::post('/coupons/ontgrendel/{coupon}', [CouponController::class, 'ontgrende
 
 
 // routes/web.php
-
-use App\Http\Controllers\Auth\LoginController;
 
 // Route voor de loginpagina
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');

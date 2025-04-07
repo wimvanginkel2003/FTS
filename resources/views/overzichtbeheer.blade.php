@@ -51,7 +51,7 @@
                         href="{{ route('detailpaginaticketboeken', ['busboeken' => $busboeking->id]) }}"
                         {{ request()->routeIs('detailpaginaticketboeken') ? 'aria-current=page' : '' }}
                     >
-                        {{ __('Detailpagina') }}
+                        {{ __('Meer informatie') }}
                     </a>
                 @endcan
 
